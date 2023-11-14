@@ -8,17 +8,21 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
+import React from 'react';
+import './App.css';
 
-function App({ signOut }) {
+function App() {
   return (
-    <View className="App">
-      <Card>
-        <Image src={logo} className="App-logo" alt="logo" />
-        <Heading level={1}>Jacob, now with Auth!</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>
+    <div className="App">
+      <header className="App-header">
+        <h1>Welcome to My React Website</h1>
+      </header>
+      <main>
+        <p>This is a simple React website.</p>
+        <button onClick={() => alert('Button Clicked!')}>Click me</button>
+      </main>
+    </div>
   );
 }
 
-export default withAuthenticator(App);
+export default App;
